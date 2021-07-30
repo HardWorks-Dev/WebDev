@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function myFunction1() {
+  var x = document.getElementById("myForm").elements[0].value;
+  var y = document.getElementById("myForm").elements[1].value;
+  document.getElementById("demo").innerHTML = x + " " + y;
+}
+
+function myFunction2() {
+  var x = document.getElementById("myForm").fname.value;
+  var y = document.getElementById("myForm").lname.value;
+  document.getElementById("demo").innerHTML = x + " " + y;
+}
+</script>
+
+<form id="myForm">
+  First name: <input type="text" name="fname" value="Donald"><br>
+  Last name: <input type="text" name="lname" value="Duck"><br>
+</form> 
+<button onclick="myFunction1()">Try it(funcao 1)</button>
+<button onclick="myFunction2()">Try it(funcao 2)</button>
+
+<p>Click the "Try it" button to display the value of the first element in the form.</p>
+
+<p id="demo">nome completo aqui!</p>
+
+</body>
+</html>
