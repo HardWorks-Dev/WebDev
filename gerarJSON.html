@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function gerarJSON() {
+  let pessoa = {};
+  pessoa.nome = document.getElementById("myForm").fname.value;
+  pessoa.sobrenome = document.getElementById("myForm").lname.value;
+  document.getElementById("demo").innerHTML = JSON.stringify(pessoa);
+}
+</script>
+
+<h3>Clique nos botões de função para atualizar os valores do formulário.</h3>
+
+<form id="myForm">
+  Digite seu nome: <input type="text" name="fname" value="Nome"><br>
+  Digite seu sobrenome: <input type="text" name="lname" value="Sobrenome"><br>
+</form> 
+
+<button onclick="gerarJSON()">gerar JSON</button>
+
+<p>Nome completo abaixo:</p>
+<h4 id="demo">Clique em um dos botões acima!</h4>
+
+</body>
+</html>
